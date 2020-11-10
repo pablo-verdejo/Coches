@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-image: url('../img/background0.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    /*vh es para que coja el 100% del navegador*/
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    /*alpha es para opacidad va de 0.1 > 0.9*/
+    background-color: rgba(0, 0, 0, 0.0);
+    display: inline-block;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.botonHeader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+    margin: -7% 0 0 -25%;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 2px solid white;;
+    color: white;
+    padding: 50px 200px;;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-family: sans-serif;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 100%;
+    padding: 0 15%;
+    background-color: rgb(247, 234, 210);
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.idioma{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.imgLeft{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.parRight{
+    margin-left: 500px;
+}
+
+.column2{
+    background-image: url('../img/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 100%;
+    padding: 0 15%;
+    display: flex;
+    align-items: center;
+}
+
+.participantes{
+    font-size: 60px;
+    margin-left: 0%;
+    color: azure;
+    font-family: sans-serif;
+
+}
+
+.button2{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 2px solid white;;
+    color: azure;
+    padding: 20px 100px;;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-family: sans-serif;
+    margin-left: 50%;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+.column {
+    width: 100%;
+}
+}
