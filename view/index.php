@@ -19,7 +19,7 @@
         </div>
         <div class="botonHeader">
             <h1>¡Gran Carrera!</h1>
-            <button class="button"onclick="window.location.href='./inscripcion.php'">INSCRIBETE</button>  
+            <button class="button"onclick="window.location.href='./inscripcion.php'">INSCRIBETE</button>
         </div>  
     </div>  
     

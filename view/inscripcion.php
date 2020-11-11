@@ -18,7 +18,7 @@
             <a href="#">Galeria</a>
         </div> 
         <div class="form">
-            <form action="./inscripcion.php" method="post">
+            <form action="./inscripcion.php" method="POST">
             <label for="dni"></label>
             <input type="text" id="dni" name="dni" placeholder="DNI...">
             <br>
@@ -40,14 +40,25 @@
             <label for="genero"></label>
             <select name="genero">   
                 <option value="Hombre">Hombre</option>
-                <option value="Mujer">Saab</option>
+                <option value="Mujer">Mujer</option>
             </select>
             <select name="categoria">
-                <option value="1">0-6</option>
-                <option value="2">6-12</option>
+                <option value="1">10-18</option>
+                <option value="2">18-55</option>
             </select>
+            <br>
+            <input type="submit" value="enviar">
             </form>
         </div>
+        
+        <?php
+        require_once  '../model/participanteDAO.php';
+        if (isset($_POST['dni']) || isset($_POST['nom']) || isset($_POST['cognom1']) || isset($_POST['cognom2']) || isset($_POST['nacimiento']) || isset($_POST['email']) || isset($_POST['genero']) || isset($_POST['categoria'])){
+            $participanteDAO = new ParticipanteDAO();
+            $participanteDAO->crearparticpante();
+        } 
+        ?>
+        
     </div>
 <footer>
     <div>
