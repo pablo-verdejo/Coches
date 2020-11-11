@@ -11,15 +11,15 @@
 <body>  
     <div class="header">
         <div class="topnav">
-            <a href="index.html">Inici</a>
+            <a href="index.php">Inici</a>
             <a href="#">Classificacions</a>
-            <a href="#">Inscripcions</a>
+            <a href="./inscripcion.php">Inscripcions</a>
             <a href="#">Noticies</a>
             <a href="#">Galeria</a>
         </div>
         <div class="botonHeader">
             <h1>¡Gran Carrera!</h1>
-            <button class="button">INSCRIBETE</button>  
+            <button class="button"onclick="window.location.href='./inscripcion.php'">INSCRIBETE</button>  
         </div>  
     </div>  
     

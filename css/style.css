@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-/* Style the header */
+
 .header {
     background-image: url('../img/background0.jpg');
     text-align: center;
@@ -19,15 +19,15 @@ body {
     background-size: cover;
 }
 
-/* Style the top navigation bar */
+
 .topnav {
     overflow: hidden;
-    /*alpha es para opacidad va de 0.1 > 0.9*/
     background-color: rgba(0, 0, 0, 0.0);
     display: inline-block;
+    margin-top: 3%;
 }
 
-/* Style the topnav links */
+
 .topnav a {
     float: left;
     display: block;
@@ -39,9 +39,9 @@ body {
     font-family: sans-serif;
 }
 
-/* Change color on hover */
+
 .topnav a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255, 0.8);
     color: black;
 }
 
@@ -72,12 +72,11 @@ body {
 }
 
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.0);
-    color: white;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: black;
     font-family: sans-serif;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
     float: left;
     width: 100%;
@@ -85,17 +84,10 @@ body {
     background-color: rgb(247, 234, 210);
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-.idioma{
-    position: absolute;
-    top: 20px;
-    right: 25px;
 }
 
 .imgLeft{
@@ -141,6 +133,27 @@ body {
     transition-duration: 0.4s;
     font-family: sans-serif;
     margin-left: 50%;
+}
+
+.fomr{
+
+}
+
+select {
+    width: 60%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5)!important;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
