@@ -1,156 +1,137 @@
 <?php
 
-class Participante{
-    public $DNI_participante;
-    public $nombre_participante;
-    public $apellido1_participante;
-    public $apellido2_participante;
-    public $fecha_nacimiento;
-    public $email_participante;
-    public $genero_participante;
-    public $id_categ;
+class Participante {
+    private $id_part;
+    private $nom_part;
+    private $apellido_part;
+    private $DNI_part;
+    private $fechaNac_part;
+    private $sexo_part;
 
-    function __construct($DNI_participante){
-        $this->$DNI_participante=$DNI_participante;
+    function __construct($nom_part, $apellido_part, $DNI_part, $fechaNac_part, $sexo_part){
+        $this->nom_part=$nom_part;
+        $this->apellido_part=$apellido_part;
+        $this->DNI_part=$DNI_part;
+        $this->fechaNac_part=$fechaNac_part;
+        $this->sexo_part=$sexo_part;
     }
 
-
     /**
-     * Get the value of DNI_participante
+     * Get the value of id_part
      */ 
-    public function getDNI_participante()
+    public function getId_part()
     {
-        return $this->DNI_participante;
+        return $this->id_part;
     }
 
     /**
-     * Set the value of DNI_participante
+     * Set the value of id_part
      *
      * @return  self
      */ 
-    public function setDNI_participante($DNI_participante)
+    public function setId_part($id_part)
     {
-        $this->DNI_participante = $DNI_participante;
+        $this->id_part = $id_part;
 
         return $this;
     }
 
     /**
-     * Get the value of nombre_participante
+     * Get the value of nom_part
      */ 
-    public function getNombre_participante()
+    public function getNom_part()
     {
-        return $this->nombre_participante;
+        return $this->nom_part;
     }
 
     /**
-     * Set the value of nombre_participante
+     * Set the value of nom_part
      *
      * @return  self
      */ 
-    public function setNombre_participante($nombre_participante)
+    public function setNom_part($nom_part)
     {
-        $this->nombre_participante = $nombre_participante;
+        $this->nom_part = $nom_part;
 
         return $this;
     }
 
     /**
-     * Get the value of apellido1_participante
+     * Get the value of apellido_part
      */ 
-    public function getApellido1_participante()
+    public function getApellido_part()
     {
-        return $this->apellido1_participante;
+        return $this->apellido_part;
     }
 
     /**
-     * Set the value of apellido1_participante
+     * Set the value of apellido_part
      *
      * @return  self
      */ 
-    public function setApellido1_participante($apellido1_participante)
+    public function setApellido_part($apellido_part)
     {
-        $this->apellido1_participante = $apellido1_participante;
+        $this->apellido_part = $apellido_part;
 
         return $this;
     }
 
     /**
-     * Get the value of apellido2_participante
+     * Get the value of DNI_part
      */ 
-    public function getApellido2_participante()
+    public function getDNI_part()
     {
-        return $this->apellido2_participante;
+        return $this->DNI_part;
     }
 
     /**
-     * Set the value of apellido2_participante
+     * Set the value of DNI_part
      *
      * @return  self
      */ 
-    public function setApellido2_participante($apellido2_participante)
+    public function setDNI_part($DNI_part)
     {
-        $this->apellido2_participante = $apellido2_participante;
+        $this->DNI_part = $DNI_part;
 
         return $this;
     }
 
     /**
-     * Get the value of fecha_nacimiento
+     * Get the value of fechaNac_part
      */ 
-    public function getFecha_nacimiento()
+    public function getFechaNac_part()
     {
-        return $this->fecha_nacimiento;
+        return $this->fechaNac_part;
     }
 
     /**
-     * Set the value of fecha_nacimiento
+     * Set the value of fechaNac_part
      *
      * @return  self
      */ 
-    public function setFecha_nacimiento($fecha_nacimiento)
+    public function setFechaNac_part($fechaNac_part)
     {
-        $this->fecha_nacimiento = $fecha_nacimiento;
+        $this->fechaNac_part = $fechaNac_part;
 
         return $this;
     }
 
     /**
-     * Get the value of email_participante
+     * Get the value of sexo_part
      */ 
-    public function getEmail_participante()
+    public function getSexo_part()
     {
-        return $this->email_participante;
+        return $this->sexo_part;
     }
 
     /**
-     * Set the value of email_participante
+     * Set the value of sexo_part
      *
      * @return  self
      */ 
-    public function setEmail_participante($email_participante)
+    public function setSexo_part($sexo_part)
     {
-        $this->email_participante = $email_participante;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of id_categ
-     */ 
-    public function getId_categ()
-    {
-        return $this->id_categ;
-    }
-
-    /**
-     * Set the value of id_categ
-     *
-     * @return  self
-     */ 
-    public function setId_categ($id_categ)
-    {
-        $this->id_categ = $id_categ;
+        $this->sexo_part = $sexo_part;
 
         return $this;
     }
