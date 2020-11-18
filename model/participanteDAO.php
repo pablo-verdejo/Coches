@@ -9,25 +9,31 @@ class ParticipanteDAO{
     }
 
     public function crearparticpante(){
-        $dni=$_POST['dni'];
-        $nom=$_POST['nom'];
-        $cognom1=$_POST['cognom1'];
-        $cognom2=$_POST['cognom2'];
-        $nacimiento=$_POST['nacimiento'];
-        $email=$_POST['email'];
-        $genero=$_POST['genero'];
-        $categoria=$_POST['categoria'];
+        try {
+            $this->pdo->beginTransaction();
+            $dni=$_POST['dni'];
+            $nom=$_POST['nom'];
+            $apellido=$_POST['apellido'];
+            $nacimiento=$_POST['nacimiento'];
+            $genero=$_POST['genero'];
+    
+            $query="INSERT INTO tbl_participante (DNI_participante,nombre_participante,apellido_participante,fecha_nacimiento,genero_participante)
+            VALUES (?,?,?,?,?);";
+            $sentencia=$this->pdo->prepare($query);
+            $sentencia->bindParam(1,$dni);
+            $sentencia->bindParam(2,$nom);
+            $sentencia->bindParam(3,$apellido);
+            $sentencia->bindParam(4,$nacimiento);
+            $sentencia->bindParam(5,$genero);
+            $sentencia->execute();
+            
+            echo "<br>";
+            echo "Has sido inscrito";
+            $this->pdo->commit();
 
-        $query="INSERT INTO tbl_participante (DNI_participante,nombre_participante,apellido1_participante,apellido2_participante,fecha_nacimiento,email_participante,genero_participante)
-        VALUES (?,?,?,?,?,?,?,?);";
-        $sentencia=$this->pdo->prepare($query);
-        $sentencia->bindParam(1,$dni);
-        $sentencia->bindParam(2,$nom);
-        $sentencia->bindParam(3,$cognom1);
-        $sentencia->bindParam(4,$cognom2);
-        $sentencia->bindParam(5,$nacimiento);
-        $sentencia->bindParam(6,$email);
-        $sentencia->bindParam(7,$genero);
-        $sentencia->execute();
+            
+        } catch (Exception $e) {
+            $this->pdo->rollBack();
+        }
     }
 }

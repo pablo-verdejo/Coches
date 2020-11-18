@@ -3,16 +3,14 @@
 class Participante{
     public $DNI_participante;
     public $nombre_participante;
-    public $apellido1_participante;
-    public $apellido2_participante;
+    public $apellido_participante;
     public $fecha_nacimiento;
-    public $email_participante;
     public $genero_participante;
-    public $id_categ;
 
     function __construct($DNI_participante){
         $this->$DNI_participante=$DNI_participante;
     }
+
 
 
     /**
@@ -56,41 +54,21 @@ class Participante{
     }
 
     /**
-     * Get the value of apellido1_participante
+     * Get the value of apellido_participante
      */ 
-    public function getApellido1_participante()
+    public function getApellido_participante()
     {
-        return $this->apellido1_participante;
+        return $this->apellido_participante;
     }
 
     /**
-     * Set the value of apellido1_participante
+     * Set the value of apellido_participante
      *
      * @return  self
      */ 
-    public function setApellido1_participante($apellido1_participante)
+    public function setApellido_participante($apellido_participante)
     {
-        $this->apellido1_participante = $apellido1_participante;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of apellido2_participante
-     */ 
-    public function getApellido2_participante()
-    {
-        return $this->apellido2_participante;
-    }
-
-    /**
-     * Set the value of apellido2_participante
-     *
-     * @return  self
-     */ 
-    public function setApellido2_participante($apellido2_participante)
-    {
-        $this->apellido2_participante = $apellido2_participante;
+        $this->apellido_participante = $apellido_participante;
 
         return $this;
     }
@@ -116,44 +94,22 @@ class Participante{
     }
 
     /**
-     * Get the value of email_participante
+     * Get the value of genero_participante
      */ 
-    public function getEmail_participante()
+    public function getGenero_participante()
     {
-        return $this->email_participante;
+        return $this->genero_participante;
     }
 
     /**
-     * Set the value of email_participante
+     * Set the value of genero_participante
      *
      * @return  self
      */ 
-    public function setEmail_participante($email_participante)
+    public function setGenero_participante($genero_participante)
     {
-        $this->email_participante = $email_participante;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of id_categ
-     */ 
-    public function getId_categ()
-    {
-        return $this->id_categ;
-    }
-
-    /**
-     * Set the value of id_categ
-     *
-     * @return  self
-     */ 
-    public function setId_categ($id_categ)
-    {
-        $this->id_categ = $id_categ;
+        $this->genero_participante = $genero_participante;
 
         return $this;
     }
 }
-
-?>

@@ -8,7 +8,8 @@ body {
 
 
 .header {
-    background-image: url('../img/background0.jpg');
+   /* background-image: url('../img/background0.jpg');*/
+    background-color: rgba(12, 223, 75, 0.486) ;
     text-align: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -42,7 +43,7 @@ body {
 
 .topnav a:hover {
     background-color: rgb(255, 255, 255, 0.8);
-    color: black;
+    color: yellow;
 }
 
 .botonHeader {
@@ -135,10 +136,13 @@ body {
     margin-left: 50%;
 }
 
+/*
 .fomr{
 
 }
+*/
 
+/*
 select {
     width: 60%;
     padding: 16px 20px;
@@ -146,7 +150,7 @@ select {
     border-radius: 4px;
     background-color: #f1f1f1;
 }
-
+*/
 footer{
     position: fixed;
     left: 0;
