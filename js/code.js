@@ -1,67 +1,67 @@
 function validacionForm() {
 
-    var valor1 = document.getElementById('1').value;
-    var valor2 = document.getElementById('2').value;
-    var valor3 = document.getElementById('3').value;
-    var valor4 = document.getElementById('4').value;
+  var nombre = document.getElementById('nombre').value;
+  var apellido = document.getElementById('apellido').value;
+  var dni = document.getElementById('dni').value;
+  var nacimiento = document.getElementById('nacimiento').value;
 
-    if (valor1 == "" || valor2 == "" || valor3 == "" || valor4 == "") {
-        document.getElementById('1').style.borderColor = "red";
-        document.getElementById('2').style.borderColor = "red";
-        document.getElementById('3').style.borderColor = "red";
-        document.getElementById('4').style.borderColor = "red";
-
-        var numero
-        var letr
-        var letra
-        var expresion_regular_valor3
-      
-        expresion_regular_valor3 = /^\d{8}[a-zA-Z]$/;
-      
-        if(expresion_regular_valor3.test (valor3) == true){
-          numero = valor3.substr(0,valor3.length-1);
-          letr = valor3.substr(valor3.length-1,1);
-          numero = numero % 23;
-          letra='TRWAGMYFPDXBNJZSQVHLCKET';
-          letra=letra.substring(numero,numero+1);
-          if (letra!=letr.toUpperCase()) {
-            alert('Dni erroneo, la letra del NIF no se corresponde');
-            return false;
-          }else{
-            alert('Dni correcto,participante inscrito');
-            return true;
-          }
-        }else{
-          alert('Dni erroneo, formato no válido');
-          return false;
-        }
-    }
+  if (nombre == "" || apellido == "" || dni == "" || nacimiento == "") {
+    document.getElementById('nombre').style.borderColor = "red";
+    document.getElementById('apellido').style.borderColor = "red";
+    document.getElementById('dni').style.borderColor = "red";
+    document.getElementById('nacimiento').style.borderColor = "red";
 
     var numero
     var letr
     var letra
-    var expresion_regular_valor3
-   
-    expresion_regular_valor3 = /^\d{8}[a-zA-Z]$/;
-   
-    if(expresion_regular_valor3.test (valor3) == true){
-       numero = valor3.substr(0,valor3.length-1);
-       letr = valor3.substr(valor3.length-1,1);
-       numero = numero % 23;
-       letra='TRWAGMYFPDXBNJZSQVHLCKET';
-       letra=letra.substring(numero,numero+1);
-      if (letra!=letr.toUpperCase()) {
-         alert('Dni erroneo, la letra del NIF no se corresponde');
-         return false;
-       }else{
-         alert('Dni correcto,participante inscrito');
-         return true;
-       }
-    }else{
-       alert('Dni erroneo, formato no válido');
-       return false;
-       
-     }
+    var expresion_regular_dni
+
+    expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+
+    if (expresion_regular_dni.test(dni) == true) {
+      numero = dni.substr(0, dni.length - 1);
+      letr = dni.substr(dni.length - 1, 1);
+      numero = numero % 23;
+      letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+      letra = letra.substring(numero, numero + 1);
+      if (letra != letr.toUpperCase()) {
+        alert('Dni erroneo, la letra del NIF no se corresponde');
+        return false;
+      } else {
+        alert('Dni correcto,participante inscrito');
+        return true;
+      }
+    } else {
+      alert('Dni erroneo, formato no válido');
+      return false;
+    }
+  }
+
+  var numero
+  var letr
+  var letra
+  var expresion_regular_dni
+
+  expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+
+  if (expresion_regular_dni.test(dni) == true) {
+    numero = dni.substr(0, dni.length - 1);
+    letr = dni.substr(dni.length - 1, 1);
+    numero = numero % 23;
+    letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+    letra = letra.substring(numero, numero + 1);
+    if (letra != letr.toUpperCase()) {
+      alert('Dni erroneo, la letra del NIF no se corresponde');
+      return false;
+    } else {
+      alert('Dni correcto,participante inscrito');
+      return true;
+    }
+  } else {
+    alert('Dni erroneo, formato no válido');
+    return false;
+
+  }
 
 }
 

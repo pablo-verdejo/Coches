@@ -45,9 +45,9 @@ INSERT INTO `tbl_categoria` (`id_cat`, `nom_cat`, `edadMax`, `edadMin`, `sexo`) 
 (7, 'AlevinM', '12', '6', 'Masculino'),
 (8, 'JuniorM', '22', '13', 'Masculino'),
 (9, 'SeniorM', '65', '23', 'Masculino'),
-(10, 'AlevinM', '12', '6', 'Femenino'),
+(10, 'AlevinF', '12', '6', 'Femenino'),
 (11, 'JuniorF', '22', '13', 'Femenino'),
-(12, 'SeniorM', '65', '23', 'Femenino');
+(12, 'SeniorF', '65', '23', 'Femenino');
 
 -- --------------------------------------------------------
 

@@ -18,13 +18,13 @@
     <div class="form">
         <form action="./inscripcion.php" method="POST" onsubmit="return validacionForm()">
             <p>Nombre: </p> 
-            <input type="text" name="name" size="40" id="1">
+            <input type="text" name="name" size="40" id="nombre">
             <p>Apellido: </p>
-            <input type="text" name="apellido" size="40" id="2">
+            <input type="text" name="apellido" size="40" id="apellido">
             <p>DNI: </p>
-            <input type="text" name="dni" size="40" id="3">
+            <input type="text" name="dni" size="40" id="dni">
             <p>Fecha de nacimiento: </p>
-            <input type="date" name="nacido" id="4">
+            <input type="date" name="nacido" id="nacimiento">
             <p>Sexo:<br><br>
                 <input type="radio" name="sexo" value="Masculino"> Masculino
                 <input type="radio" name="sexo" value="Femenino"> Femenino
